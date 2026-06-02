@@ -35,22 +35,21 @@ public class homework {
         $("[id=dateOfBirthInput]").click();
         $(".react-datepicker__month-select").selectOption("November");
         $(".react-datepicker__year-select").selectOption("2024");
-
+        $(".react-datepicker__day--019:not(.react-datepicker__day--outside-month)").click();
         $("[id=dateOfBirthInput]").click();
         $("[id=dateOfBirthInput]").pressEnter();
         //Увлечение
         $("[id=subjectsInput]").setValue("Physics").pressEnter();
         $("[id=subjectsInput]").setValue("Chemistry").pressEnter();
         $("[id=hobbies-checkbox-1]").click();
-        //Загрузка картинки (не разобрался как подгрузить картинку, я так понял нужно использовать uploadFile и указать путь но не получилось часа 2 гуглил и думал но выдавалась ошибка)
-        //$("[id=uploadPicture]").uploadFile();
+        //Загрузка картинки
+        $("[id=uploadPicture]").uploadFromClasspath("Screenshot_2.png");
         $("[id=currentAddress]").setValue("г. Москва Черноморский бульвар");
         // выбор города
-        $("#state .css-13cymwt-control").click();
-        $(byText("Haryana")).click();
-        $("#city .css-13cymwt-control").click();
-        $(byText("Karnal")).click();
+        $("#react-select-3-input").setValue("NCR").pressEnter();
+        $("#react-select-4-input").setValue("Delhi").pressEnter();
         $("[id=submit]").click();
+
     }
 
     @Test
