@@ -19,21 +19,23 @@ public class homework {
         Configuration.browserSize = "1920x1080";
 //        Configuration.pageLoadStrategy = "eager";
         Configuration.timeout = 10000; // default 4000
+        Configuration.baseUrl = "https://demoqa.com";
     }
 
 
     @Test
-    void all_fields_Test() {
-        open("https://demoqa.com/automation-practice-form");
+    void allFieldsTest() {
+        open("/automation-practice-form");
         $("[id=firstName]").setValue("ilia");
         $("[id=lastName]").setValue("Miroshnichenko");
         $("[id=userEmail]").setValue("mir.il@mail.ru");
         $("[id=gender-radio-1]").click();
         $("[id=userNumber]").setValue("0000000000");
-        //Календарь (Уточнить про день) как выбирать день в колендаре, понял как год и месяц (через селектопцию)
+        //Календарь
         $("[id=dateOfBirthInput]").click();
         $(".react-datepicker__month-select").selectOption("November");
         $(".react-datepicker__year-select").selectOption("2024");
+
         $("[id=dateOfBirthInput]").click();
         $("[id=dateOfBirthInput]").pressEnter();
         //Увлечение
@@ -52,8 +54,8 @@ public class homework {
     }
 
     @Test
-    void only_with_required_fields() {
-        open("https://demoqa.com/automation-practice-form");
+    void onlyWithRequiredFields() {
+        open("/automation-practice-form");
         $("[id=firstName]").setValue("ilia");
         $("[id=lastName]").setValue("Miroshnichenko");
         $("[id=userEmail]").setValue("mir.il@mail.ru");
@@ -63,8 +65,8 @@ public class homework {
     }
 
     @Test
-    void the_negative_scenario_1() {
-        open("https://demoqa.com/automation-practice-form");
+    void theNegativeScenario1() {
+        open("/automation-practice-form");
         $("[id=firstName]").setValue("ilia");
         $("[id=lastName]").setValue("Miroshnichenko");
         $("[id=userEmail]").setValue("324421");
@@ -75,8 +77,8 @@ public class homework {
     }
 
     @Test
-    void the_negative_scenario_2() {
-        open("https://demoqa.com/automation-practice-form");
+    void theNegativeScenario2() {
+        open("/automation-practice-form");
         $("[id=firstName]").setValue("ilia");
         $("[id=lastName]").setValue("Miroshnichenko");
         $("[id=userEmail]").setValue("mir.il@mail.ru");
@@ -87,8 +89,8 @@ public class homework {
     }
 
     @Test
-    void the_negative_scenario_3() {
-        open("https://demoqa.com/automation-practice-form");
+    void theNegativeScenario3() {
+        open("/automation-practice-form");
         $("[id=firstName]").setValue("ilia");
         $("[id=userEmail]").setValue("mir.il@mail.ru");
         $("[id=gender-radio-1]").click();
@@ -97,8 +99,8 @@ public class homework {
     }
 
     @Test
-    void the_negative_scenario_4() {
-        open("https://demoqa.com/automation-practice-form");
+    void theNegativeScenario4() {
+        open("/automation-practice-form");
         $("[id=lastName]").setValue("Miroshnichenko");
         $("[id=userEmail]").setValue("mir.il@mail.ru");
         $("[id=gender-radio-1]").click();
@@ -107,8 +109,8 @@ public class homework {
     }
 
     @Test
-    void simple_form_1() {
-        open("https://demoqa.com/text-box");
+    void simpleForm1() {
+        open("/text-box");
         $("[id=userName]").setValue("ilia");
         $("[id=userEmail]").setValue("mir.il@mail.ru");
         $("[id=currentAddress]").setValue("г Москва, б-р Бескудниковский");
@@ -117,8 +119,8 @@ public class homework {
     }
 
     @Test
-    void simple_form_2() {
-        open("https://demoqa.com/text-box");
+    void simpleForm2() {
+        open("/text-box");
         $("[id=userName]").setValue("Niko");
         $("[id=userEmail]").setValue("mir.il2012@mail.ru");
         $("[id=currentAddress]").setValue("г Тверь улица тверь дом тверь");
@@ -127,16 +129,16 @@ public class homework {
     }
 
     @Test
-    void simple_minimum_form() {
-        open("https://demoqa.com/text-box");
+    void simpleMinimumForm() {
+        open("/text-box");
         $("[id=userName]").setValue("Niko");
         $("[id=userEmail]").setValue("mir.il2012@mail.ru");
         $("[id=submit]").click();
     }
 
     @Test
-    void imple_form_negative() {
-        open("https://demoqa.com/text-box");
+    void simpleFormNegative() {
+        open("/text-box");
         $("[id=userName]").setValue("ilia");
         $("[id=userEmail]").setValue("888777555444");
         $("[id=currentAddress]").setValue("г Москва, б-р Бескудниковский");
