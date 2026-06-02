@@ -115,6 +115,10 @@ public class homework {
         $("[id=currentAddress]").setValue("г Москва, б-р Бескудниковский");
         $("[id=permanentAddress]").setValue("г. Москва Черноморский бульвар");
         $("[id=submit]").click();
+        $("[id=output] [id=name]").shouldHave(text("ilia"));
+        $("[id=output] [id=email]").shouldHave(text("mir.il@mail.ru"));
+        $("[id=output] [id=currentAddress]").shouldHave(text("г Москва, б-р Бескудниковский"));
+        $("[id=output] [id=permanentAddress]").shouldHave(text("г. Москва Черноморский бульвар"));
     }
 
     @Test
@@ -125,6 +129,10 @@ public class homework {
         $("[id=currentAddress]").setValue("г Тверь улица тверь дом тверь");
         $("[id=permanentAddress]").setValue("г. Москва улица Кустанайская");
         $("[id=submit]").click();
+        $("[id=output] [id=name]").shouldHave(text("Niko"));
+        $("[id=output] [id=email]").shouldHave(text("mir.il2012@mail.ru"));
+        $("[id=output] [id=currentAddress]").shouldHave(text("г Тверь улица тверь дом тверь"));
+        $("[id=output] [id=permanentAddress]").shouldHave(text("г. Москва улица Кустанайская"));
     }
 
     @Test
@@ -133,6 +141,8 @@ public class homework {
         $("[id=userName]").setValue("Niko");
         $("[id=userEmail]").setValue("mir.il2012@mail.ru");
         $("[id=submit]").click();
+        $("[id=output] [id=name]").shouldHave(text("Niko"));
+        $("[id=output] [id=email]").shouldHave(text("mir.il2012@mail.ru"));
     }
 
     @Test
