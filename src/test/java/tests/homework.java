@@ -89,7 +89,8 @@ public class homework {
         $("[id=gender-radio-1]").click();
         $("[id=userNumber]").setValue("0000000000");
         $("[id=submit]").click();
-
+        $("#userEmail").shouldHave(cssValue("border-color", "rgb(220, 53, 69)"));
+        $(".table-hover").shouldNotBe(visible);
 
     }
 
@@ -102,6 +103,8 @@ public class homework {
         $("[id=gender-radio-1]").click();
         $("[id=userNumber]").setValue("dfsfxdvb");
         $("[id=submit]").click();
+        $("#userNumber").shouldHave(cssValue("border-color", "rgb(220, 53, 69)"));
+        $(".table-hover").shouldNotBe(visible);
 
     }
 
@@ -113,6 +116,8 @@ public class homework {
         $("[id=gender-radio-1]").click();
         $("[id=userNumber]").setValue("0000000000");
         $("[id=submit]").click();
+        $("#lastName").shouldHave(cssValue("border-color", "rgb(220, 53, 69)"));
+        $(".table-hover").shouldNotBe(visible);
     }
 
     @Test
@@ -123,6 +128,8 @@ public class homework {
         $("[id=gender-radio-1]").click();
         $("[id=userNumber]").setValue("0000000000");
         $("[id=submit]").click();
+        $("#firstName").shouldHave(cssValue("border-color", "rgb(220, 53, 69)"));
+        $(".table-hover").shouldNotBe(visible);
     }
 
     @Test
