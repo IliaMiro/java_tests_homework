@@ -49,6 +49,18 @@ public class homework {
         $("#react-select-3-input").setValue("NCR").pressEnter();
         $("#react-select-4-input").setValue("Delhi").pressEnter();
         $("[id=submit]").click();
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $(".table-hover").shouldHave(text("ilia"));
+        $(".table-hover").shouldHave(text("mir.il@mail.ru"));
+        $(".table-hover").shouldHave(text("Miroshnichenko"));
+        $(".table-hover").shouldHave(text("0000000000"));
+        $(".table-hover").shouldHave(text("19 November,2024"));
+        $(".table-hover").shouldHave(text("Sports"));
+        $(".table-hover").shouldHave(text("Physics, Chemistry"));
+        $(".table-hover").shouldHave(text("Screenshot_2.png"));
+        $(".table-hover").shouldHave(text("г. Москва Черноморский бульвар"));
+        $(".table-hover").shouldHave(text("NCR"));
+        $(".table-hover").shouldHave(text("Delhi"));
 
     }
 
@@ -61,6 +73,11 @@ public class homework {
         $("[id=gender-radio-1]").click();
         $("[id=userNumber]").setValue("0000000000");
         $("[id=submit]").click();
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $(".table-hover").shouldHave(text("ilia"));
+        $(".table-hover").shouldHave(text("Miroshnichenko"));
+        $(".table-hover").shouldHave(text("mir.il@mail.ru"));
+        $(".table-hover").shouldHave(text("0000000000"));
     }
 
     @Test
@@ -72,6 +89,7 @@ public class homework {
         $("[id=gender-radio-1]").click();
         $("[id=userNumber]").setValue("0000000000");
         $("[id=submit]").click();
+
 
     }
 
